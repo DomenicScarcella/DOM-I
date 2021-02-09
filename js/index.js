@@ -61,6 +61,39 @@ navText[3].textContent = siteContent["nav"]["nav-item-4"];
 navText[4].textContent = siteContent["nav"]["nav-item-5"];
 navText[5].textContent = siteContent["nav"]["nav-item-6"];
 
-let newNav
+let navBlog = document.createElement("a")
+navBlog.textContent = "Blog"
+navBlog.href = "#"
+document.querySelector("nav").appendChild(navBlog);
+
+let navHome = document.createElement("a")
+navHome.textContent = "Home"
+navHome.href = "#"
+document.querySelector("nav").prepend(navHome);
+
+let navColor = document.querySelector("nav");
+navColor.style.backgroundColor = "green";
 
 
+
+let mainFeatH = document.querySelector(".main-content .top-content .text-content h4");
+mainFeatH.textContent = siteContent["main-content"]["features-h4"];
+
+let mainFeatP = document.querySelector(".main-content .top-content .text-content p");
+mainFeatP.textContent = siteContent["main-content"]["features-content"];
+
+
+let contactH = document.querySelector(".contact h4");
+contactH.textContent = siteContent["contact"]["contact-h4"];
+
+let contactA = document.querySelector(".contact p");
+contactA.textContent = siteContent["contact"]["address"];
+
+let contactPh = document.querySelector(".contact p");
+contactPh.textContent = siteContent["contact"]["phone"];
+
+let contactE = document.querySelector(".contact p");
+contactE.textContent = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
