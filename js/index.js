@@ -48,6 +48,7 @@ navText[2].textContent = siteContent["nav"]["nav-item-3"];
 navText[3].textContent = siteContent["nav"]["nav-item-4"];
 navText[4].textContent = siteContent["nav"]["nav-item-5"];
 navText[5].textContent = siteContent["nav"]["nav-item-6"];
+navText.forEach((colorG) => (colorG.style.color = "green"));
 
 let navBlog = document.createElement("a")
 navBlog.textContent = "Blog"
@@ -60,8 +61,6 @@ navHome.textContent = "Home"
 navHome.href = "#"
 document.querySelector("nav").prepend(navHome);
 navHome.style.color = "green";
-
-navText.forEach((colorG) => (colorG.style.color = "green"));
 
 
 
@@ -79,12 +78,13 @@ button.textContent = siteContent["cta"]["button"];
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-let mainH = document.querySelectorAll("h4");
+let mainH = document.querySelectorAll(".text-content h4");
 mainH[0].textContent = siteContent["main-content"]["features-h4"];
 mainH[1].textContent = siteContent["main-content"]["about-h4"];
 mainH[2].textContent = siteContent["main-content"]["services-h4"];
 mainH[3].textContent = siteContent["main-content"]["product-h4"];
 mainH[4].textContent = siteContent["main-content"]["vision-h4"];
+mainH.forEach((colorB) => (colorB.style.color = "blue"));
 
 let mainP = document.querySelectorAll(".main-content p");
 mainP[0].textContent = siteContent["main-content"]["features-content"];
@@ -102,8 +102,6 @@ let contactP = document.querySelectorAll(".contact p");
 contactP[0].innerHTML = siteContent["contact"]["address"].split("t S").join("t<br>S");
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
-
-
 
 let footer = document.querySelector("footer");
 footer.textContent = siteContent["footer"]["copyright"];
