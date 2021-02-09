@@ -65,35 +65,43 @@ let navBlog = document.createElement("a")
 navBlog.textContent = "Blog"
 navBlog.href = "#"
 document.querySelector("nav").appendChild(navBlog);
+navBlog.style.color = "green";
 
 let navHome = document.createElement("a")
 navHome.textContent = "Home"
 navHome.href = "#"
 document.querySelector("nav").prepend(navHome);
+navHome.style.color = "green";
 
-let navColor = document.querySelector("nav");
-navColor.style.backgroundColor = "green";
+navText.forEach((colorG) => (colorG.style.color = "green"));
 
 
 
-let mainFeatH = document.querySelector(".main-content .top-content .text-content h4");
-mainFeatH.textContent = siteContent["main-content"]["features-h4"];
+let mainH = document.querySelectorAll("h4");
+mainH[0].textContent = siteContent["main-content"]["features-h4"];
+mainH[1].textContent = siteContent["main-content"]["about-h4"];
+mainH[2].textContent = siteContent["main-content"]["services-h4"];
+mainH[3].textContent = siteContent["main-content"]["product-h4"];
+mainH[4].textContent = siteContent["main-content"]["vision-h4"];
 
-let mainFeatP = document.querySelector(".main-content .top-content .text-content p");
-mainFeatP.textContent = siteContent["main-content"]["features-content"];
+let mainP = document.querySelectorAll(".main-content p");
+mainP[0].textContent = siteContent["main-content"]["features-content"];
+mainP[1].textContent = siteContent["main-content"]["about-content"];
+mainP[2].textContent = siteContent["main-content"]["services-content"];
+mainP[3].textContent = siteContent["main-content"]["product-content"];
+mainP[4].textContent = siteContent["main-content"]["vision-content"];
+
 
 
 let contactH = document.querySelector(".contact h4");
 contactH.textContent = siteContent["contact"]["contact-h4"];
 
-let contactA = document.querySelector(".contact p");
-contactA.textContent = siteContent["contact"]["address"];
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
 
-let contactPh = document.querySelector(".contact p");
-contactPh.textContent = siteContent["contact"]["phone"];
 
-let contactE = document.querySelector(".contact p");
-contactE.textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.textContent = siteContent["footer"]["copyright"];
