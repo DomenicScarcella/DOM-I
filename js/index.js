@@ -41,18 +41,6 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
-
-let midImg = document.getElementById("middle-img");
-midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
-
-let hOne = document.querySelector("h1");
-hOne.textContent = siteContent["cta"]["h1"];
-
-let button = document.querySelector("button");
-button.textContent = siteContent["cta"]["button"];
-
 let navText = document.querySelectorAll("nav a");
 navText[0].textContent = siteContent["nav"]["nav-item-1"];
 navText[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -77,6 +65,20 @@ navText.forEach((colorG) => (colorG.style.color = "green"));
 
 
 
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let hOne = document.querySelector("h1");
+hOne.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
+
+let button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
+
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
 let mainH = document.querySelectorAll("h4");
 mainH[0].textContent = siteContent["main-content"]["features-h4"];
 mainH[1].textContent = siteContent["main-content"]["about-h4"];
@@ -97,7 +99,7 @@ let contactH = document.querySelector(".contact h4");
 contactH.textContent = siteContent["contact"]["contact-h4"];
 
 let contactP = document.querySelectorAll(".contact p");
-contactP[0].textContent = siteContent["contact"]["address"];
+contactP[0].innerHTML = siteContent["contact"]["address"].split("t S").join("t<br>S");
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 
